@@ -3,7 +3,6 @@
     "description": "API de clase de PHP 2o DAM",
     "type": "package",
     "license": "mit",
-    "minimum-stability": "dev",
     "require": {},
     "autoload": {
         "psr-4": {
