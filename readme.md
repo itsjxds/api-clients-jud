@@ -1,6 +1,6 @@
 ## Basic Usage
 
-### Necesitarás poner esto en tu composer.json
+### Necesitarás poner esto en tu composer.json para que se instale el componente
 ```json
 {
     "minimum-stability": "dev"
