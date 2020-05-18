@@ -1,12 +1,19 @@
 ## Basic Usage
 
+### Necesitarás poner esto en tu composer.json
+```json
+{
+    "minimum-stability": "dev"
+}
+```
+
 ### Autoloading
 ```php
 <?php
 require_once __DIR__ . '/vendor/autoload.php';
 ```
 
-### Example to get all the clients
+### Ejemplo para ver todos los clientes
 ```php
 <?php 
 
