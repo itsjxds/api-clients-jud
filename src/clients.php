@@ -13,17 +13,18 @@ class Clients extends DBconn{
     }
 
     function getClientbyDate($date){
-        $sql = 'SELECT * FROM `clients` WHERE date>"' . $date . '";';
-        $result = $this->connect()->query($sql);
-        $this->disconnect();
-        return $result;
+        $sql = 'SELECT * FROM `clients` WHERE date > :date';
+        $stmt = $this->connect()->prepare($sql);
+        $stmt->execute([':date' => $date]);
+        return $stmt;
     }
 
     function getClientByName($clientName){
-        $sql = 'SELECT * FROM clients WHERE name LIKE "%' . $clientName . '%";';
-        $result = $this->connect()->query($sql);
-        $this->disconnect();
-        return $result;
+        $name = '%' . $clientName . '%';
+        $sql = 'SELECT * FROM `clients` WHERE name LIKE ?';
+        $stmt = $this->connect()->prepare($sql);
+        $stmt->execute([$name]);
+        return $stmt;
     }
 }
 ?>
